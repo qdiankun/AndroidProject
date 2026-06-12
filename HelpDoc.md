@@ -415,7 +415,7 @@ public class PermissionsAspect {
     /**
      * 方法切入点
      */
-    @Pointcut("execution(@com.hjq.demo.aop.Permissions * *(..))")
+    @Pointcut("execution(@com.slone.demo.aop.Permissions * *(..))")
     public void method() {}
 
     /**

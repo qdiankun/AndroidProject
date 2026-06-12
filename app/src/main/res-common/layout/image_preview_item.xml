@@ -5,4 +5,4 @@
     android:id="@+id/iv_image_preview_photo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.adapter.common.ImagePreviewAdapter" />
+    tools:context="com.slone.demo.ui.adapter.common.ImagePreviewAdapter" />

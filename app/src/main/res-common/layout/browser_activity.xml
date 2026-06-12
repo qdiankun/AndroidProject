@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.activity.common.BrowserActivity">
+    tools:context="com.slone.demo.ui.activity.common.BrowserActivity">
 
     <com.hjq.bar.TitleBar
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
         android:progressDrawable="@drawable/progress_gradient_bg"
         android:visibility="gone" />
 
-    <com.hjq.demo.widget.StatusLayout
+    <com.slone.demo.widget.StatusLayout
         android:id="@+id/sl_browser_status"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -35,13 +35,13 @@
             app:srlEnablePreviewInEditMode="false"
             app:srlPrimaryColor="#444444">
 
-            <com.hjq.demo.widget.webview.BrowserView
+            <com.slone.demo.widget.webview.BrowserView
                 android:id="@+id/wv_browser_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
         </com.scwang.smart.refresh.layout.SmartRefreshLayout>
 
-    </com.hjq.demo.widget.StatusLayout>
+    </com.slone.demo.widget.StatusLayout>
 
 </LinearLayout>

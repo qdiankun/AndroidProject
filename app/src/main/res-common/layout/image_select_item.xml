@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".ui.adapter.common.ImageSelectAdapter">
+    tools:context="com.slone.demo.ui.adapter.common.ImageSelectAdapter">
 
     <com.hjq.custom.widget.view.ScaleImageView
         android:id="@+id/iv_image_select_image"

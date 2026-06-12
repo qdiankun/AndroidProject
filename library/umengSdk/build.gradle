@@ -39,6 +39,7 @@ android {
 dependencies {
     api libs.umengCommon
     api libs.umengAsms
+    api libs.umengLink
 
     api libs.umengShareCore
     api libs.umengShareWX

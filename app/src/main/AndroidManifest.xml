@@ -2,7 +2,7 @@
 <!-- 清单文件合并指引：https://developer.android.google.cn/studio/build/manifest-merge?hl=zh-cn -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.hjq.demo">
+    package="com.slone.demo">
 
     <!-- 网络相关 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -33,7 +33,7 @@
     <!-- Application 节点详解：https://developer.android.google.cn/guide/topics/manifest/application-element -->
     <!-- Activity 节点详解：https://developer.android.google.cn/guide/topics/manifest/activity-element -->
     <application
-        android:name=".app.AppApplication"
+        android:name="com.slone.demo.app.AppApplication"
         android:allowBackup="false"
         android:icon="@mipmap/launcher_ic"
         android:label="${app_name}"
@@ -68,7 +68,7 @@
 
         <!-- 闪屏页 -->
         <activity
-            android:name=".ui.activity.SplashActivity"
+            android:name="com.slone.demo.ui.activity.SplashActivity"
             android:exported="true"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
@@ -82,17 +82,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="ulinkclick"/>
+            </intent-filter>
         </activity>
 
         <!-- 引导页 -->
         <activity
-            android:name=".ui.activity.GuideActivity"
+            android:name="com.slone.demo.ui.activity.GuideActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
 
         <!-- 首页 -->
         <activity
-            android:name=".ui.activity.HomeActivity"
+            android:name="com.slone.demo.ui.activity.HomeActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
@@ -100,41 +110,41 @@
 
         <!-- 登录页 -->
         <activity
-            android:name=".ui.activity.account.LoginActivity"
+            android:name="com.slone.demo.ui.activity.account.LoginActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
 
         <!-- 注册页 -->
         <activity
-            android:name=".ui.activity.account.RegisterActivity"
+            android:name="com.slone.demo.ui.activity.account.RegisterActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
 
         <!-- 崩溃展示（必须在独立进程） -->
         <activity
-            android:name=".ui.activity.common.CrashActivity"
+            android:name="com.slone.demo.ui.activity.common.CrashActivity"
             android:launchMode="singleTop"
             android:process=":crash"
             android:screenOrientation="landscape" />
 
         <!-- 重启应用（必须在独立进程） -->
         <activity
-            android:name=".ui.activity.common.RestartActivity"
+            android:name="com.slone.demo.ui.activity.common.RestartActivity"
             android:launchMode="singleTop"
             android:process=":restart" />
 
         <!-- 设置页 -->
         <activity
-            android:name=".ui.activity.SettingActivity"
+            android:name="com.slone.demo.ui.activity.SettingActivity"
             android:label="@string/setting_title"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
 
         <!-- 忘记密码 -->
         <activity
-            android:name=".ui.activity.account.PasswordForgetActivity"
+            android:name="com.slone.demo.ui.activity.account.PasswordForgetActivity"
             android:label="@string/password_forget_title"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
@@ -142,7 +152,7 @@
 
         <!-- 重置密码 -->
         <activity
-            android:name=".ui.activity.account.PasswordResetActivity"
+            android:name="com.slone.demo.ui.activity.account.PasswordResetActivity"
             android:label="@string/password_reset_title"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
@@ -150,7 +160,7 @@
 
         <!-- 更换手机 -->
         <activity
-            android:name=".ui.activity.account.PhoneResetActivity"
+            android:name="com.slone.demo.ui.activity.account.PhoneResetActivity"
             android:label="@string/phone_reset_title"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
@@ -158,21 +168,21 @@
 
         <!-- 关于我们 -->
         <activity
-            android:name=".ui.activity.AboutActivity"
+            android:name="com.slone.demo.ui.activity.AboutActivity"
             android:label="@string/about_title"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
 
         <!-- 个人资料 -->
         <activity
-            android:name=".ui.activity.account.PersonalDataActivity"
+            android:name="com.slone.demo.ui.activity.account.PersonalDataActivity"
             android:label="@string/personal_data_title"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
 
         <!-- 网页浏览 -->
         <activity
-            android:name=".ui.activity.common.BrowserActivity"
+            android:name="com.slone.demo.ui.activity.common.BrowserActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="@string/web_title"
             android:launchMode="singleTop"
@@ -180,58 +190,58 @@
 
         <!-- 拍照选择 -->
         <activity
-            android:name=".ui.activity.common.CameraActivity"
+            android:name="com.slone.demo.ui.activity.common.CameraActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
 
         <!-- 图片选择 -->
         <activity
-            android:name=".ui.activity.common.ImageSelectActivity"
+            android:name="com.slone.demo.ui.activity.common.ImageSelectActivity"
             android:label="@string/image_select_title"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
 
         <!-- 查看大图 -->
         <activity
-            android:name=".ui.activity.common.ImagePreviewActivity"
+            android:name="com.slone.demo.ui.activity.common.ImagePreviewActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
 
         <!-- 播放视频（自适应方向） -->
         <activity
-            android:name=".ui.activity.common.VideoPlayActivity"
+            android:name="com.slone.demo.ui.activity.common.VideoPlayActivity"
             android:launchMode="singleTop"
             android:theme="@style/FullScreenTheme" />
 
         <!-- 播放视频（竖屏方向） -->
         <activity
-            android:name=".ui.activity.common.VideoPlayActivity$Portrait"
+            android:name="com.slone.demo.ui.activity.common.VideoPlayActivity$Portrait"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/FullScreenTheme" />
 
         <!-- 播放视频（横屏方向） -->
         <activity
-            android:name=".ui.activity.common.VideoPlayActivity$Landscape"
+            android:name="com.slone.demo.ui.activity.common.VideoPlayActivity$Landscape"
             android:launchMode="singleTop"
             android:screenOrientation="landscape"
             android:theme="@style/FullScreenTheme" />
 
         <!-- 选择视频 -->
         <activity
-            android:name=".ui.activity.common.VideoSelectActivity"
+            android:name="com.slone.demo.ui.activity.common.VideoSelectActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
 
         <!-- 对话框案例 -->
         <activity
-            android:name=".ui.activity.DialogActivity"
+            android:name="com.slone.demo.ui.activity.DialogActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
 
         <!-- 状态案例 -->
         <activity
-            android:name=".ui.activity.StatusActivity"
+            android:name="com.slone.demo.ui.activity.StatusActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
 

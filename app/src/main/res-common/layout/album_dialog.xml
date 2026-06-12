@@ -11,7 +11,7 @@
     app:shape_radius="@dimen/dp_20"
     app:shape_solidColor="@color/white"
     app:shape_type="rectangle"
-    tools:context=".ui.dialog.common.AlbumDialog"
+    tools:context="com.slone.demo.ui.dialog.common.AlbumDialog"
     tools:itemCount="4"
     tools:layoutAnimation="@null"
     tools:listitem="@layout/album_item" />

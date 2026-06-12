@@ -10,7 +10,7 @@
     app:shape_radiusInTopRight="@dimen/dp_20"
     app:shape_solidColor="@color/white"
     app:shape_type="rectangle"
-    tools:context=".ui.dialog.common.ShareDialog">
+    tools:context="com.slone.demo.ui.dialog.common.ShareDialog">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="match_parent"

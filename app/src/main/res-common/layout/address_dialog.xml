@@ -10,7 +10,7 @@
     app:shape_radiusInTopRight="@dimen/dp_20"
     app:shape_solidColor="@color/white"
     app:shape_type="rectangle"
-    tools:context=".ui.dialog.common.AddressDialog">
+    tools:context="com.slone.demo.ui.dialog.common.AddressDialog">
 
     <FrameLayout
         android:layout_width="match_parent"

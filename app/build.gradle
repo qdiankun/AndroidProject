@@ -9,7 +9,7 @@ apply from : '../common.gradle'
 
 // Android 代码规范文档：https://github.com/getActivity/AndroidCodeStandard
 android {
-    namespace 'com.hjq.demo'
+    namespace 'com.slone.demo'
 
     buildFeatures {
         // 是否生成 BuildConfig 类
@@ -20,7 +20,7 @@ android {
     defaultConfig {
 
         // 无痛修改包名：https://www.jianshu.com/p/17327e191d2e
-        applicationId 'com.hjq.demo'
+        applicationId 'com.slone.demo'
 
         // 仅保留中文语种的资源
         resConfigs 'zh'

@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
     android:paddingHorizontal="@dimen/dp_10"
-    tools:context=".ui.adapter.common.TabAdapter">
+    tools:context="com.slone.demo.ui.adapter.common.TabAdapter">
 
     <com.hjq.shape.view.ShapeTextView
         android:id="@+id/tv_tab_sliding_title"

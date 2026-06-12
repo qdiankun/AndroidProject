@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.fragment.home.HomeMessageFragment">
+    tools:context="com.slone.demo.ui.fragment.home.HomeMessageFragment">
 
     <com.hjq.bar.TitleBar
         android:layout_width="match_parent"
